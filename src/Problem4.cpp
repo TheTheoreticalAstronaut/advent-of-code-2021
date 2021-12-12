@@ -1,7 +1,6 @@
 #include "Problem4.h"
 #include <fstream>
 #include <sstream>
-#include <iostream>
 #include <algorithm>
 #include <numeric>
 
