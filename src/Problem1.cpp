@@ -14,13 +14,13 @@ void Problem1::loadData(){
 	}
 }
 
-uint32_t Problem1::runPartOne(){
+ret_t Problem1::runPartOne(){
 	uint32_t increaseCounter{0};
 	for(size_t depth=1; depth<data.size(); depth++) increaseCounter += (data[depth] > data[depth-1]);
 	return increaseCounter;
 }
 
-uint32_t Problem1::runPartTwo(){
+ret_t Problem1::runPartTwo(){
 	uint32_t increaseCounter{0};
 	for(size_t depth=3; depth<data.size(); depth++) increaseCounter += (data[depth] > data[depth-3]);
 	return increaseCounter;

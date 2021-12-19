@@ -21,7 +21,7 @@ void Problem3::loadData(){
 	}
 }
 
-uint32_t Problem3::runPartOne(){
+ret_t Problem3::runPartOne(){
 	std::vector<uint32_t> bitCounts(bitSize, 0);
 	for(const auto& bin : data){
 		for(size_t c = 0; c < bin.size(); c++) bitCounts[c] += (bin[c] == '1');
@@ -34,12 +34,12 @@ uint32_t Problem3::runPartOne(){
 	return gammaRate * (~gammaRate & mask);
 }
 
-uint32_t Problem3::runPartTwo(){
+ret_t Problem3::runPartTwo(){
 	std::vector<std::string> dataO2(data), dataCO2(data);
 	return determinePartTwoRates(dataO2, 0, true) * determinePartTwoRates(dataCO2, 0, false);
 }
 
-uint32_t Problem3::determinePartTwoRates(std::vector<std::string>& remainingData, uint8_t bit, bool selectMostCommon) const{
+ret_t Problem3::determinePartTwoRates(std::vector<std::string>& remainingData, uint8_t bit, bool selectMostCommon) const{
 	if(remainingData.size() == 1) return strtoul(remainingData[0].c_str(), nullptr, 2);
 
 	uint32_t bitCount{0};

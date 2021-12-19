@@ -3,16 +3,20 @@
 
 #include <cstdint>
 
+using ret_t = uint64_t;
+
 class AoCProblem{
 
 public:
 	virtual ~AoCProblem(){}
 
+	virtual uint8_t getId() = 0;
+
 	virtual void loadData() = 0;
 
-	virtual uint32_t runPartOne() = 0;
+	virtual ret_t runPartOne() = 0;
 
-	virtual uint32_t runPartTwo() = 0;
+	virtual ret_t runPartTwo() = 0;
 };
 
 #endif /* AOCPROBLEM_H */

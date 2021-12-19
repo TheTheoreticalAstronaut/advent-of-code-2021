@@ -31,7 +31,7 @@ void Problem4::loadData(){
 	}
 }
 
-uint32_t Problem4::runPartOne(){
+ret_t Problem4::runPartOne(){
 	Board* latestWinningBoard{nullptr};
 	for(auto number : draw){
 		for(auto& board : boards){
@@ -49,7 +49,7 @@ uint32_t Problem4::runPartOne(){
 	return 0;
 }
 
-uint32_t Problem4::runPartTwo(){
+ret_t Problem4::runPartTwo(){
 	Board* latestWinningBoard;
 	uint32_t drawLWB{0};
 	for(auto number : draw){

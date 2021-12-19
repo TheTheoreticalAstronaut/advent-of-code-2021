@@ -16,7 +16,7 @@ void Problem2::loadData(){
 	}
 }
 
-uint32_t Problem2::runPartOne(){
+ret_t Problem2::runPartOne(){
 	uint32_t horizontalPosition{0};
 	uint32_t depth{0};
 	for(const auto& [instruction, number] : data){
@@ -26,7 +26,7 @@ uint32_t Problem2::runPartOne(){
 	return horizontalPosition * depth;
 }
 
-uint32_t Problem2::runPartTwo(){
+ret_t Problem2::runPartTwo(){
 	uint32_t horizontalPosition{0};
 	uint32_t depth{0};
 	uint32_t aim{0};

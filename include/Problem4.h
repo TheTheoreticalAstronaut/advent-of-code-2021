@@ -7,11 +7,13 @@ class Problem4 : public AoCProblem {
 public:
 	Problem4();
 
+	virtual uint8_t getId() override { return 4; }
+
 	virtual void loadData() override;
 
-	virtual uint32_t runPartOne() override;
+	virtual ret_t runPartOne() override;
 
-	virtual uint32_t runPartTwo() override;
+	virtual ret_t runPartTwo() override;
 
 private:
 	static const uint8_t N{5};
