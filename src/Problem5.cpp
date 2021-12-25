@@ -12,15 +12,15 @@ void Problem5::loadData(){
 	std::string inputLine;
 
 	while(getline(inputFile, inputLine)){
-		std::stringstream drawSS(inputLine);
+		std::stringstream line(inputLine);
 		uint32_t p0x, p0y, p1x, p1y;
-		drawSS >> p0x;
-		drawSS.ignore(1);
-		drawSS >> p0y;
-		drawSS.ignore(4);
-		drawSS >> p1x;
-		drawSS.ignore(1);
-		drawSS >> p1y;
+		line >> p0x;
+		line.ignore(1);
+		line >> p0y;
+		line.ignore(4);
+		line >> p1x;
+		line.ignore(1);
+		line >> p1y;
 		lines.emplace_back(p0x, p0y, p1x, p1y);
 		sizeX = sizeX > p0x ? sizeX : p0x;
 		sizeX = sizeX > p1x ? sizeX : p1x;

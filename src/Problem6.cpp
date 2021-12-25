@@ -1,6 +1,5 @@
 #include "Problem6.h"
 #include <fstream>
-#include <sstream>
 #include <numeric>
 
 Problem6::Problem6(){
@@ -9,14 +8,11 @@ Problem6::Problem6(){
 
 void Problem6::loadData(){
 	std::fstream inputFile("./resources/day6.dat", std::ios_base::in);
-	std::string inputLine;
-	
-	getline(inputFile, inputLine);
-	std::stringstream initialDistribution(inputLine);
-	uint32_t number;
-	while(initialDistribution >> number){
-		++initialJellyfish[number];
-		initialDistribution.ignore();
+	uint32_t jellyfish;
+
+	while(inputFile >> jellyfish){
+		++initialJellyfish[jellyfish];
+		inputFile.ignore();
 	}
 }
 
