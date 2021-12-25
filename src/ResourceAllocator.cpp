@@ -6,6 +6,9 @@
 #include "Problem5.h"
 #include "Problem6.h"
 #include "Problem7.h"
+#include "Problem8.h"
+#include "Problem9.h"
+#include "Problem10.h"
 
 ResourceAllocator::ResourceAllocator(){
     problems.push_back(std::make_unique<Problem1>());
@@ -15,4 +18,7 @@ ResourceAllocator::ResourceAllocator(){
     problems.push_back(std::make_unique<Problem5>());
     problems.push_back(std::make_unique<Problem6>());
     problems.push_back(std::make_unique<Problem7>());
+    problems.push_back(std::make_unique<Problem8>());
+    problems.push_back(std::make_unique<Problem9>());
+    problems.push_back(std::make_unique<Problem10>());
 }
