@@ -1,4 +1,7 @@
 #include "AoCProblem.h"
+#include <vector>
+#include <string>
+#include <stack>
 
 class Problem10 : public AoCProblem {
 public:
@@ -13,4 +16,7 @@ public:
 	virtual ret_t runPartTwo() override;
 
 private:
+	std::vector<std::string> lines;
+
+	bool isLineCorrupted(const std::string& line, std::stack<char>& brackets) const;
 };
