@@ -2,8 +2,12 @@
 #define AOCPROBLEM_H
 
 #include <cstdint>
+#include <vector>
 
 using ret_t = uint64_t;
+
+template<typename T>
+using matrix_t = std::vector<std::vector<T>>;
 
 class AoCProblem{
 

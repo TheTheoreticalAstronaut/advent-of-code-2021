@@ -1,6 +1,5 @@
 #include "Problem2.h"
 #include <fstream>
-#include <iostream>
 
 Problem2::Problem2(){
 	loadData();

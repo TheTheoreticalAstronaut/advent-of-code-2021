@@ -1,5 +1,4 @@
 #include "AoCProblem.h"
-#include <vector>
 
 class Problem1 : public AoCProblem {
 
