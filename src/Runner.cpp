@@ -1,8 +1,10 @@
 #include <iostream>
 #include "ResourceAllocator.h"
 
-int main(){
+int main(int argc, char** argv){
 	ResourceAllocator resAlloc;
+	if(argc < 2) resAlloc.addAllProblems();
+	else for(int arg=1; arg<argc; arg++) resAlloc.addProblem(atoi(argv[arg]));
 	const auto& problems = resAlloc.getProblems();
 	for(const auto& problem : problems){
 		std::cout << "Problem " << +problem->getId() << "\n";

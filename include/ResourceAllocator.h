@@ -4,7 +4,9 @@
 
 class ResourceAllocator{
 public:
-    ResourceAllocator();
+    void addAllProblems();
+
+    void addProblem(uint8_t problem);
 
     const std::vector<std::unique_ptr<AoCProblem>>& getProblems() const {
         return problems;
